@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:buster
 MAINTAINER Christophe Combelles. <ccomb@anybox.fr>
 
 RUN set -x; \
@@ -17,7 +17,7 @@ RUN set -x; \
     && mkdir /etc/buttervolume /root/.ssh
 
 ENV VERSION master
-RUN curl -o buttervolume.zip -SL https://github.com/anybox/buttervolume/archive/${VERSION}.zip \
+RUN curl -o buttervolume.zip -SL https://github.com/risteon/buttervolume/archive/${VERSION}.zip \
     && unzip buttervolume.zip \
     && rm buttervolume.zip \
     && mv buttervolume-${VERSION} buttervolume \
